@@ -22,13 +22,20 @@ module Autoparts
         FileUtils.rm_rf 'FWTools-2.0.6/.'
         
       end
-            
+      
+      def env_file
+        Path.env + 'fwtools'
+      end
+      
       def required_env
-				[
-          'export PATH="$PATH:$HOME/.parts/packages/fwtools/2.0.6/bin_safe/"',
-          'export PYTHONPATH="$PYTHONPATH:$HOME/.parts/packages/fwtools/2.0.6/pymod/"',   
+        env_file.unlink if env_file.exist?
+        [
+          "export GOROOT=#{prefix_path}",
+          "export GOPATH=#{go_packages}",
+          "export PATH=$PATH:$GOPATH/fwtools/2.0.6/bin_safe/",
+          "export PYTHONPATH=$PYTHONPATH:$GOPATH/fwtools/2.0.6/pymod/",
         ]
-      end    
+      end
       
     end
   end
