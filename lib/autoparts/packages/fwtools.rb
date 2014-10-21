@@ -22,19 +22,11 @@ module Autoparts
         FileUtils.rm_rf 'FWTools-2.0.6/.'
         
       end
-      
-      def pymod_path
-        prefix_path + '/pymod'
-      end
-      
-      def bin_safe_path
-        prefix_path + '/bin_safe'
-      end
-      
+            
       def required_env
 				[
-          "PATH=$PATH:/home/codio/.parts/packages/fwtools/2.0.6/bin_safe/",
-          "PYTHONPATH=$PYTHONPATH:/home/codio/.parts/packages/fwtools/2.0.6/pymod/",       
+          'export PATH="$PATH:$HOME/.parts/packages/fwtools/2.0.6/bin_safe/"',
+          'export PYTHONPATH="$PYTHONPATH:$HOME/.parts/packages/fwtools/2.0.6/pymod/"',   
         ]
       end    
       
