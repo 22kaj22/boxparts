@@ -30,10 +30,8 @@ module Autoparts
       def required_env
         env_file.unlink if env_file.exist?
         [
-          "export GOROOT=#{prefix_path}",
-          "export GOPATH=#{go_packages}",
-          "export PATH=$PATH:$GOPATH/fwtools/2.0.6/bin_safe/",
-          "export PYTHONPATH=$PYTHONPATH:$GOPATH/fwtools/2.0.6/pymod/",
+          "export PATH=$PATH:$HOME/fwtools/2.0.6/bin_safe/",
+          "export PYTHONPATH=$PYTHONPATH:$HOME/fwtools/2.0.6/pymod/",
         ]
       end
       
