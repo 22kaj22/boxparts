@@ -1,7 +1,16 @@
 Changelog:
 
 
-This page contains a list of recent updates made to the Codio BoxParts. For a full list of all parts see [Box Parts](https://codio.com/s/docs/boxes/box-parts/) 
+This page contains a list of recent updates made to the Codio BoxParts.
+
+###October 21st, 2014
+- **Additions**
+  - freetds (thanks @jondkinney)
+  
+###October 20th, 2014
+- **Additions**
+  - php5-gettext
+  - taglib (thanks @joeyfromspace)
 
 ###October 19th, 2014
 - **Improvement**
